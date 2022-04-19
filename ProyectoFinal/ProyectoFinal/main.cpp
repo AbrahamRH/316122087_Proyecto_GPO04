@@ -108,6 +108,7 @@ int main()
     Model bed((char*)"Models/Bed/bed.obj");
     Model bote((char*)"Models/BoteBasura/bote.obj");
     Model mesa((char*)"Models/Mesa/Mesa.obj");
+    Model rack((char*)"Models/Rack/Rack.obj");
     glm::mat4 projection = glm::perspective(camera.GetZoom(), (float)SCREEN_WIDTH / (float)SCREEN_HEIGHT, 0.1f, 100.0f);
 
     float vertices[] = {
@@ -243,24 +244,30 @@ int main()
         // Draw the loaded model
         glm::mat4 model(1);
         
-        //model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
-        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-        glBindVertexArray(VAO);
-       // glDrawArrays(GL_TRIANGLES, 0, 36);
+        ////model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
+        //glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        //glBindVertexArray(VAO);
         //bed.Draw(lightingShader);
 
 
-        model = glm::mat4(1);
-        model = glm::translate(model, glm::vec3(7.0f, .0f, 7.0f));
-        glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
-        glBindVertexArray(VAO);
+        //model = glm::mat4(1);
+        //model = glm::translate(model, glm::vec3(7.0f, .0f, 7.0f));
+        //glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        //glBindVertexArray(VAO);
         //bote.Draw(lightingShader);
+
+        //model = glm::mat4(1);
+        //model = glm::translate(model, glm::vec3(0.0f, .0f, 7.0f));
+        //glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
+        //glBindVertexArray(VAO);
+        //mesa.Draw(lightingShader);
 
         model = glm::mat4(1);
         model = glm::translate(model, glm::vec3(0.0f, .0f, 7.0f));
+        model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
         glUniformMatrix4fv(glGetUniformLocation(lightingShader.Program, "model"), 1, GL_FALSE, glm::value_ptr(model));
         glBindVertexArray(VAO);
-        mesa.Draw(lightingShader);
+        rack.Draw(lightingShader);
             
 
         glBindVertexArray(0);
