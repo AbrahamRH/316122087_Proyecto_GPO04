@@ -1,9 +1,24 @@
 ﻿  main.cpp
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(204,30): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(392,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(393,17): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(397,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(398,21): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(400,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(401,13): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(198,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(233,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(234,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(235,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(483,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(484,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(488,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(489,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(491,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(492,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   ProyectoFinal.vcxproj -> E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\ProyectoFinal.exe
