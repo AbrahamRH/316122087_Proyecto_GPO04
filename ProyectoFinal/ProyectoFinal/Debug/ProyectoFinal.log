@@ -1,27 +1,24 @@
 ﻿  main.cpp
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(198,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(233,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(193,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(228,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(234,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(229,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(235,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(230,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
           with
           [
               T=float
           ]
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(458,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(459,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(463,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(464,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(466,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(467,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_DXT.obj)' o en 'E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-soil2-debug.lib(image_helper.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_helper.obj)' o en 'E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(SOIL2.obj)' o en 'E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(480,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(481,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(485,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(486,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(488,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(489,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
   ProyectoFinal.vcxproj -> E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\ProyectoFinal.exe
