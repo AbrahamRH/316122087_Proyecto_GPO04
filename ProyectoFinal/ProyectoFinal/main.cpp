@@ -43,9 +43,12 @@ bool firstMouse = true;
 glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
 bool active;
 
+
+glm::vec3 casaPos(0.0f, 0.0f, -20.0f);
+
 // Positions of the point lights
 glm::vec3 pointLightPositions[] = {
-	glm::vec3(0.0f,5.0f, 0.0f),
+	glm::vec3(0.0f,5.0f, 0.0f) + casaPos,
 };
 
 
@@ -287,14 +290,14 @@ int main()
 
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-2.5f, 0.1f, 0.0f));
+		model = glm::translate(model, casaPos + glm::vec3(-2.5f, 0.1f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Mesa.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-1.9f, 0.1f, 0.0f));
+		model = glm::translate(model,casaPos + glm::vec3(-1.9f, 0.1f, 0.0f));
 		model = glm::rotate(model,glm::radians(-55.0f),glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
@@ -303,14 +306,14 @@ int main()
 
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-2.5f, 0.1f, 1.5f));
+		model = glm::translate(model, casaPos + glm::vec3(-2.5f, 0.1f, 1.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Bote.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(-2.5f, 0.0f, 3.5f));
+		model = glm::translate(model,casaPos + glm::vec3(-2.5f, 0.0f, 3.5f));
 		model = glm::rotate(model,glm::radians(90.0f),glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
@@ -318,7 +321,7 @@ int main()
 		Rack.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(2.5f, 0.0f, 2.0f));
+		model = glm::translate(model, casaPos + glm::vec3( 2.5f, 0.0f, 2.0f));
 		model = glm::rotate(model,glm::radians(90.0f),glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
@@ -326,14 +329,15 @@ int main()
 		Cama.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::rotate(model,glm::radians(90.0f),glm::vec3(0.0,1.0,0.0));
+		model = glm::translate(model, casaPos);
+		model = glm::rotate(model,glm::radians(90.0f), glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Room.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, glm::vec3(0.0f, 0.0f, -20.0f));
+		model = glm::translate(model, casaPos);
 		model = glm::rotate(model,glm::radians(-90.0f),glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
