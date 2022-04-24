@@ -158,8 +158,10 @@ int main()
 
 	Model Piso((char*)"Models/Piso/Piso.obj");
 	Model Mesa((char*)"Models/Mesa/mesa.obj");
+	Model Silla((char*)"Models/Silla/Silla.obj");
 	Model Rack((char*)"Models/Rack/Rack.obj");
 	Model Bote((char*)"Models/Bote/bote.obj");
+	Model Casa((char*)"Models/Casa/Casa.obj");
 	Model Cama((char*)"Models/Bed/Bed.obj");
 
 
@@ -292,6 +294,15 @@ int main()
 		Mesa.Draw(lightingShader);
 
 		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(-1.9f, 0.1f, 0.0f));
+		model = glm::rotate(model,glm::radians(-55.0f),glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Silla.Draw(lightingShader);
+
+
+		model = glm::mat4(1);
 		model = glm::translate(model, glm::vec3(-2.5f, 0.1f, 1.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
@@ -321,6 +332,13 @@ int main()
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Room.Draw(lightingShader);
 
+		model = glm::mat4(1);
+		model = glm::translate(model, glm::vec3(0.0f, 0.0f, -20.0f));
+		model = glm::rotate(model,glm::radians(-90.0f),glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Casa.Draw(lightingShader);
 		//model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 
 
