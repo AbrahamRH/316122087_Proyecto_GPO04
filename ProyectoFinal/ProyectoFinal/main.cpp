@@ -42,9 +42,11 @@ bool firstMouse = true;
 // Light attributes
 glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
 bool active;
+float door1 = 0;
 
 
 glm::vec3 casaPos(0.0f, 0.0f, -20.0f);
+glm::vec3 cuartoPos = casaPos + glm::vec3(0.0f, 0.2f, -2.0f);
 
 // Positions of the point lights
 glm::vec3 pointLightPositions[] = {
@@ -157,15 +159,17 @@ int main()
 	Shader lampShader("Shaders/lamp.vs", "Shaders/lamp.frag");
 
 
+	Model Casa((char*)"Models/Casa/Casa.obj");
 	Model Room((char*)"Models/Room/room.obj");
-
 	Model Piso((char*)"Models/Piso/Piso.obj");
 	Model Mesa((char*)"Models/Mesa/mesa.obj");
 	Model Silla((char*)"Models/Silla/Silla.obj");
 	Model Rack((char*)"Models/Rack/Rack.obj");
 	Model Bote((char*)"Models/Bote/bote.obj");
-	Model Casa((char*)"Models/Casa/Casa.obj");
 	Model Cama((char*)"Models/Bed/Bed.obj");
+	Model Puerta((char*)"Models/Puerta/Puerta.obj");
+
+	Model cuarto((char*)"Models/Cuarto/alessaroom.obj");
 
 
 
@@ -222,7 +226,7 @@ int main()
 
 
 		// Directional light
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.direction"), 0.2f, 1.0f, 0.3f);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.direction"), .1f, .1f, .1f);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.ambient"), .1f, .1f, .1f);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.diffuse"), 0.6f, 0.5f, 0.5f);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.specular"), 0.76f, 0.89f, 0.40f);
@@ -290,14 +294,14 @@ int main()
 
 		glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		model = glm::mat4(1);
-		model = glm::translate(model, casaPos + glm::vec3(-2.5f, 0.1f, 0.0f));
+		model = glm::translate(model, cuartoPos + glm::vec3(-1.7f, 0.1f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Mesa.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model,casaPos + glm::vec3(-1.9f, 0.1f, 0.0f));
+		model = glm::translate(model, cuartoPos + glm::vec3(-1.f, 0.1f, 0.0f));
 		model = glm::rotate(model,glm::radians(-55.0f),glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
@@ -306,14 +310,14 @@ int main()
 
 
 		model = glm::mat4(1);
-		model = glm::translate(model, casaPos + glm::vec3(-2.5f, 0.1f, 1.5f));
+		model = glm::translate(model, cuartoPos + glm::vec3(-1.6f, 0.1f, 1.5f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Bote.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model,casaPos + glm::vec3(-2.5f, 0.0f, 3.5f));
+		model = glm::translate(model, cuartoPos + glm::vec3(-1.6f, 0.0f, 3.0f));
 		model = glm::rotate(model,glm::radians(90.0f),glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
@@ -321,7 +325,7 @@ int main()
 		Rack.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, casaPos + glm::vec3( 2.5f, 0.0f, 2.0f));
+		model = glm::translate(model, cuartoPos + glm::vec3( 1.5f, 0.0f, .5f));
 		model = glm::rotate(model,glm::radians(90.0f),glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
@@ -329,8 +333,8 @@ int main()
 		Cama.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, casaPos);
-		model = glm::rotate(model,glm::radians(90.0f), glm::vec3(0.0,1.0,0.0));
+		model = glm::translate(model, cuartoPos);
+		model = glm::rotate(model,glm::radians(-90.0f), glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
@@ -343,6 +347,16 @@ int main()
 		glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Casa.Draw(lightingShader);
+
+
+		//model = glm::mat4(1);
+		//model = glm::translate(model, cuartoPos + glm::vec3(0,0,10));
+		//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		//glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+		//glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		//cuarto.Draw(lightingShader);
+
+
 		//model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 
 
@@ -459,6 +473,7 @@ void DoMovement()
 	}
 
 
+
 }
 
 // Is called whenever a key is pressed/released via GLFW
@@ -492,7 +507,18 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 	//	{
 	//		Light1 = glm::vec3(0);//Cuado es solo un valor en los 3 vectores pueden dejar solo una componente
 	//	}
-	//}
+
+	if (keys[GLFW_KEY_I])
+	{
+		active = !active;
+		if (active)
+		{
+			door1 += 1.0f;
+			if (door1 >= 90) {
+				active = !active;
+			}
+		}
+	}
 }
 
 void MouseCallback(GLFWwindow* window, double xPos, double yPos)
