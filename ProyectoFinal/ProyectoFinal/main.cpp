@@ -45,7 +45,7 @@ bool active;
 float door1 = 0;
 
 
-glm::vec3 casaPos(0.0f, 0.0f, -20.0f);
+glm::vec3 casaPos(0.0f, 0.2f, -20.0f);
 glm::vec3 cuartoPos = casaPos + glm::vec3(0.0f, 0.2f, -2.0f);
 
 // Positions of the point lights
