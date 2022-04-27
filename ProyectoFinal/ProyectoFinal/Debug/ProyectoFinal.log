@@ -1,29 +1,13 @@
 ﻿  main.cpp
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(202,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(237,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
-          with
-          [
-              T=float
-          ]
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(238,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
-          with
-          [
-              T=float
-          ]
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(239,21): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
-          with
-          [
-              T=float
-          ]
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(528,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(529,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(533,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(534,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(536,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(537,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
-LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
-soil2-debug.lib(etc1_utils.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(etc1_utils.obj)' o en 'E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(203,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(233,101): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(518,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(519,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(523,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(524,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(526,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\main.cpp(527,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
 soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_DXT.obj)' o en 'E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
 soil2-debug.lib(image_helper.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_helper.obj)' o en 'E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(SOIL2.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(SOIL2.obj)' o en 'E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
   ProyectoFinal.vcxproj -> E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Debug\ProyectoFinal.exe
