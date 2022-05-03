@@ -47,15 +47,15 @@ bool openDoor1 = false, closeDoor1 = false;
 
 
 glm::vec3 casaPos(0.0f, 0.2f, -20.0f);
-glm::vec3 cuartoPos = casaPos + glm::vec3(0.0f, 0.2f, -2.0f);
+glm::vec3 cuartoPos = casaPos + glm::vec3(-5.0f, 0.2f, -2.0f);
 glm::vec3 cuartoPos2 = casaPos + glm::vec3(5.0f, 0.2f, -2.0f);
 
 // Positions of the point lights
 glm::vec3 pointLightPositions[] = {
-	glm::vec3(0.0f,4.0f, -3.0f) + casaPos,
+	glm::vec3(0.0f,3.8f, 0.0f) + cuartoPos,
 	glm::vec3(9.0f,15.0f, 8.0f) + casaPos,
 	glm::vec3(-9.0f,15.0f, 8.0f) + casaPos,
-	glm::vec3(-1.5f,8.0f, 8.0f) + casaPos,
+	glm::vec3(-1.5f,8.0f, 8.0f) + cuartoPos2,
 };
 
 
@@ -105,7 +105,7 @@ float vertices[] = {
 };
 
 
-
+glm::vec3 spotLight,  spotL = glm::vec3(0);
 glm::vec3 Light1 = glm::vec3(0);
 glm::vec3 Light2 = glm::vec3(0);
 glm::vec3 Light3 = glm::vec3(0);
@@ -281,15 +281,16 @@ int main()
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "pointLights[3].quadratic"), 1.8f);
 
 		// SpotLight
+		spotLight = spotL;
 
 		// SpotLight
 		//glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.position"), spotlightPosition.x, spotlightPosition.y, spotlightPosition.z);
 		//glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.direction"), spotlightDirection.x, spotlightDirection.y, spotlightDirection.z);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.direction"), camera.GetFront().x , camera.GetFront().y , camera.GetFront().z );
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.position"), camera.GetPosition().x , camera.GetPosition().y , camera.GetPosition().z );
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.ambient"), 1.0f, 1.0f, 1.0f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.diffuse"), 0.1f, 0.1f, 0.1f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.specular"), 0.1f, 0.1f, 0.1f);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.ambient"), spotLight.x, spotLight.y, spotLight.z);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.diffuse"), spotLight.x*.1, spotLight.y*.1, spotLight.z * .1);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.specular"), spotLight.x*.1, spotLight.y*.1, spotLight.z * .1);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.constant"), 1.0f);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.linear"), 0.32f);
 		glUniform1f(glGetUniformLocation(lightingShader.Program, "spotLight.quadratic"), 0.44f);
@@ -418,6 +419,12 @@ int main()
 		model = glm::translate(model, lightPos);
 		model = glm::scale(model, glm::vec3(0.2f)); // Make it a smaller cube
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+			//model = glm::mat4(1);
+			//model = glm::translate(model, pointLightPositions[0]);
+			//model = glm::scale(model, glm::vec3(0.01f)); // Make it a smaller cube
+			//glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+			//glBindVertexArray(VAO);
+			//glDrawArrays(GL_TRIANGLES, 0, 36);
 		// Draw the light object (using light's vertex attributes)
 		for (GLuint i = 0; i < 4; i++)
 		{
@@ -495,10 +502,6 @@ void DoMovement()
 	{
 		pointLightPositions[0].y -= 0.01f;
 	}
-	if (keys[GLFW_KEY_U])
-	{
-		pointLightPositions[0].z -= 0.1f;
-	}
 
 	if (openDoor1) {
 		door1 += 2.0f;
@@ -541,11 +544,11 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 		active = !active;
 		if (active)
 		{
-			Light1 = glm::vec3(1.0f, 1.0f, 1.0f);
+			spotL = glm::vec3(1.0f, 1.0f, 1.0f);
 		}
 		else
 		{
-			Light1 = glm::vec3(0);//Cuado es solo un valor en los 3 vectores pueden dejar solo una componente
+			spotL = glm::vec3(0);//Cuado es solo un valor en los 3 vectores pueden dejar solo una componente
 		}
 	}
 
@@ -559,6 +562,19 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 		else
 		{
 			Light2 = glm::vec3(0);//Cuado es solo un valor en los 3 vectores pueden dejar solo una componente
+		}
+	}
+
+	if (keys[GLFW_KEY_U])
+	{
+		active = !active;
+		if (active)
+		{
+			Light1 = glm::vec3(1.0f, 1.0f, 1.0f);
+		}
+		else
+		{
+			Light1 = glm::vec3(0);//Cuado es solo un valor en los 3 vectores pueden dejar solo una componente
 		}
 	}
 
