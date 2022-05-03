@@ -170,6 +170,7 @@ int main()
 	Model Cama((char*)"Models/Bed/Bed.obj");
 	Model Puerta((char*)"Models/Puerta/Puerta.obj");
 	Model Armario((char*)"Models/Armario/armario.obj");
+	Model Mueble((char*)"Models/Mueble/Mueble.obj");
 
 
 
@@ -335,6 +336,20 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Armario.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos + glm::vec3(1.85f, 0.1f, -2.0f));
+		model = glm::rotate(model,glm::radians(-90.0f), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Mueble.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos + glm::vec3(0.0f, 0.0f, 0.0f));
+		model = glm::rotate(model,glm::radians(door1), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Puerta.Draw(lightingShader);
 
 		model = glm::mat4(1);
 		model = glm::translate(model, casaPos);
