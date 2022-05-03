@@ -43,6 +43,7 @@ bool firstMouse = true;
 glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
 bool active;
 float door1 = 0;
+bool openDoor1 = false, closeDoor1 = false;
 
 
 glm::vec3 casaPos(0.0f, 0.2f, -20.0f);
@@ -231,7 +232,7 @@ int main()
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.direction"), -0.1f, -1.0f, -0.3f);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.ambient"), .01f, .01f, .01f);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.diffuse"), 0.1f, 0.1f, 0.1f);
-		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.specular"), 0.854, 0.949, 0.964);
+		glUniform3f(glGetUniformLocation(lightingShader.Program, "dirLight.specular"), 0.054, 0.049, 0.064);
 
 
 		// Point light 1
@@ -345,8 +346,8 @@ int main()
 		Mueble.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, cuartoPos + glm::vec3(0.0f, 0.0f, 0.0f));
-		model = glm::rotate(model,glm::radians(door1), glm::vec3(0.0,1.0,0.0));
+		model = glm::translate(model, cuartoPos + glm::vec3(-0.8f, 1.7f, 4.0f));
+		model = glm::rotate(model,glm::radians(90.0f - door1), glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Puerta.Draw(lightingShader);
@@ -476,6 +477,18 @@ void DoMovement()
 		pointLightPositions[0].z += 0.01f;
 	}
 
+	if (openDoor1) {
+		door1 += 2.0f;
+		if (door1 >= 90)
+			openDoor1 = false;
+	}
+
+	if (closeDoor1) {
+		door1 -= 2.0f;
+		if (door1 <= 0)
+			closeDoor1 = false;
+	}
+
 
 
 }
@@ -515,14 +528,11 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 
 	if (keys[GLFW_KEY_I])
 	{
-		active = !active;
-		if (active)
-		{
-			door1 += 1.0f;
-			if (door1 >= 90) {
-				active = !active;
-			}
-		}
+		openDoor1 = true;
+	}
+	if (keys[GLFW_KEY_O])
+	{
+		closeDoor1 = true;
 	}
 }
 
