@@ -31,6 +31,7 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 void MouseCallback(GLFWwindow* window, double xPos, double yPos);
 void DoMovement();
 void ratAnim();
+void bearAnim();
 
 // Window dimensions
 const GLuint WIDTH = 1280, HEIGHT = 720;
@@ -51,7 +52,7 @@ float door1 = 0;
 bool openDoor1 = false, closeDoor1 = false;
 
 
-// variables para el auto
+// variables para la rata
 bool recorrido1 = true;
 bool recorrido2, recorrido3, recorrido4 = false;
 bool circuito = false;
@@ -59,10 +60,15 @@ float rotRata = 0;
 float movRataX = 0;
 float movRataZ = 0;
 
+// variables para el oso
+float rotOso = 0.0f;
+
 
 glm::vec3 casaPos(0.0f, 0.2f, -20.0f);
 glm::vec3 cuartoPos = casaPos + glm::vec3(-5.0f, 0.2f, -2.0f);
 glm::vec3 cuartoPos2 = casaPos + glm::vec3(5.0f, 0.2f, -2.0f);
+
+glm::vec3 cabezaOsoPos = cuartoPos + glm::vec3(-1.7f, 1.4f, -0.02f);
 
 // Positions of the point lights
 glm::vec3 pointLightPositions[] = {
@@ -329,6 +335,7 @@ int main()
 		glfwPollEvents();
 		DoMovement();
 		ratAnim();
+		bearAnim();
 
 		// Clear the colorbuffer
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -439,8 +446,8 @@ int main()
 		Piso.Draw(lightingShader);
 
 		model = glm::mat4(1);
-		model = glm::translate(model, cuartoPos + glm::vec3(-1.7f, 1.4f, 0.0f));
-		model = glm::rotate(model,glm::radians(180.0f),glm::vec3(0.0,1.0,0.0));
+		model = glm::translate(model, cabezaOsoPos);
+		model = glm::rotate(model,glm::radians(180.0f + rotOso),glm::vec3(0.0,1.0,0.0));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		CabezaOso.Draw(lightingShader);
@@ -795,6 +802,15 @@ void ratAnim() {
 			}
 		}
 	}
+}
 
 
+void bearAnim() {
+	const float PI = 3.141592;
+
+	if (circuito) {
+		float m = ( camera.GetPosition().z - cabezaOsoPos.z ) / ( camera.GetPosition().x - cabezaOsoPos.x);
+		float ang = atan(m)*180/PI;
+		rotOso = -ang;
+	}
 }
