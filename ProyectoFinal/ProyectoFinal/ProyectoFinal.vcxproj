@@ -19,9 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="meshAnim.h" />
@@ -42,6 +39,9 @@
     <None Include="Shaders\modelLoading.vs" />
     <None Include="Shaders\SkyBox.frag" />
     <None Include="Shaders\SkyBox.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ProyectoFinal.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
