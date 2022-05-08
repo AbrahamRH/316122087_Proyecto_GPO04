@@ -30,6 +30,7 @@
 void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode);
 void MouseCallback(GLFWwindow* window, double xPos, double yPos);
 void DoMovement();
+void ratAnim();
 
 // Window dimensions
 const GLuint WIDTH = 1280, HEIGHT = 720;
@@ -44,8 +45,19 @@ bool firstMouse = true;
 // Light attributes
 glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
 bool active;
+
+// variables para las puertas
 float door1 = 0;
 bool openDoor1 = false, closeDoor1 = false;
+
+
+// variables para el auto
+bool recorrido1 = true;
+bool recorrido2, recorrido3, recorrido4 = false;
+bool circuito = false;
+float rotRata = 0;
+float movRataX = 0;
+float movRataZ = 0;
 
 
 glm::vec3 casaPos(0.0f, 0.2f, -20.0f);
@@ -180,6 +192,11 @@ int main()
 	Model Puerta((char*)"Models/Puerta/Puerta.obj");
 	Model Armario((char*)"Models/Armario/armario.obj");
 	Model Mueble((char*)"Models/Mueble/Mueble.obj");
+	Model Rata((char*)"Models/Rata/rata.obj");
+
+	Model CabezaOso((char*)"Models/Oso/Cabeza/cabeza.obj");
+	Model CuerpoOso((char*)"Models/Oso/Cuerpo/cuerpo.obj");
+
 
 	GLfloat skyboxVertices[] = {
 		// Positions
@@ -311,6 +328,7 @@ int main()
 		// Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions
 		glfwPollEvents();
 		DoMovement();
+		ratAnim();
 
 		// Clear the colorbuffer
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
@@ -421,6 +439,20 @@ int main()
 		Piso.Draw(lightingShader);
 
 		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos + glm::vec3(-1.7f, 1.4f, 0.0f));
+		model = glm::rotate(model,glm::radians(180.0f),glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		CabezaOso.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos + glm::vec3(-1.7f, 1.2f, 0.0f));
+		model = glm::rotate(model,glm::radians(180.0f),glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		CuerpoOso.Draw(lightingShader);
+
+		model = glm::mat4(1);
 		model = glm::translate(model, cuartoPos + glm::vec3(-1.7f, 0.1f, 0.0f));
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
@@ -481,6 +513,13 @@ int main()
 		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Puerta.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos + glm::vec3(-2.0f + movRataX, 0.1f, movRataZ));
+		model = glm::rotate(model,glm::radians(90.0f + rotRata), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Rata.Draw(lightingShader);
 
 		model = glm::mat4(1);
 		model = glm::translate(model, casaPos);
@@ -694,6 +733,7 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 	if (keys[GLFW_KEY_I])
 	{
 		openDoor1 = true;
+		circuito = true;
 	}
 	if (keys[GLFW_KEY_O])
 	{
@@ -717,4 +757,44 @@ void MouseCallback(GLFWwindow* window, double xPos, double yPos)
 	lastY = yPos;
 
 	camera.ProcessMouseMovement(xOffset, yOffset);
+}
+
+
+void ratAnim() {
+
+	if (circuito) {
+		if (recorrido1) {
+			movRataX += 0.1f;
+			if (movRataX > 4.0f) {
+				recorrido1 = false;
+				recorrido2 = true;
+			}
+		}
+		if (recorrido2) {
+			rotRata = -90.0f;
+			movRataZ += 0.1f;
+			if (movRataZ > 3.0f) {
+				recorrido2 = false;
+				recorrido3 = true;
+			}
+		}
+		if (recorrido3) {
+			rotRata = 180.0f;
+			movRataX -= 0.1f;
+			if (movRataX <= 0.7f) {
+				recorrido3 = false;
+				recorrido4 = true;
+			}
+		}
+		if (recorrido4) {
+			rotRata = 180.0f;
+			movRataZ -= 0.1f;
+			if (movRataX <= 2.0f) {
+				recorrido4 = false;
+				recorrido1 = true;
+			}
+		}
+	}
+
+
 }
