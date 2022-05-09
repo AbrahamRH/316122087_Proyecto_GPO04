@@ -52,6 +52,9 @@ float door1 = 0, door2 = 0 ;
 bool openDoor1 = false, closeDoor1 = false;
 bool openDoor2 = false, closeDoor2 = false;
 
+float ventana = 0;
+bool openWindow = false;
+bool closeWindow = false;
 
 // variables para la rata
 bool recorrido1 = true;
@@ -64,6 +67,7 @@ float movRataZ = 0;
 // variables para el oso
 float rotOso = 0.0f;
 
+float tiempo;
 
 glm::vec3 casaPos(0.0f, 0.2f, -20.0f);
 glm::vec3 cuartoPos = casaPos + glm::vec3(-5.0f, 0.2f, -2.0f);
@@ -148,8 +152,8 @@ int main()
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	//GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final", nullptr, nullptr);
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final", glfwGetPrimaryMonitor(), nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final", nullptr, nullptr);
+	//GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final", glfwGetPrimaryMonitor(), nullptr);
 
 	if (nullptr == window)
 	{
@@ -187,6 +191,7 @@ int main()
 	Shader lightingShader("Shaders/lighting.vs", "Shaders/lighting.frag");
 	Shader lampShader("Shaders/lamp.vs", "Shaders/lamp.frag");
 	Shader SkyBoxshader("Shaders/SkyBox.vs", "Shaders/SkyBox.frag");
+	Shader Anim("Shaders/anim.vs","Shaders/anim.frag");
 
 	Model Casa((char*)"Models/Casa/Casa.obj");
 	Model Room((char*)"Models/Room/room.obj");
@@ -200,10 +205,10 @@ int main()
 	Model Armario((char*)"Models/Armario/armario.obj");
 	Model Mueble((char*)"Models/Mueble/Mueble.obj");
 	Model Rata((char*)"Models/Rata/rata.obj");
-
 	Model CabezaOso((char*)"Models/Oso/Cabeza/cabeza.obj");
 	Model CuerpoOso((char*)"Models/Oso/Cuerpo/cuerpo.obj");
-
+	Model Humo((char*)"Models/Chimenea/humo.obj");
+	Model Ventana((char*)"Models/Ventana/ventana.obj");
 
 	GLfloat skyboxVertices[] = {
 		// Positions
@@ -529,6 +534,12 @@ int main()
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Rata.Draw(lightingShader);
 
+		model = glm::mat4(1);
+		model = glm::translate(model, casaPos +glm::vec3(-5.2f, 18.757f, 7.6f));
+		model = glm::rotate(model,glm::radians(-90.0f - ventana), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Ventana.Draw(lightingShader);
 
 
 		model = glm::mat4(1);
@@ -560,6 +571,23 @@ int main()
 		//glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 		//glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
 		//glDisable(GL_BLEND);  //Desactiva el canal alfa 
+
+		glBindVertexArray(0);
+
+		Anim.Use();
+		tiempo = glfwGetTime();
+		modelLoc = glGetUniformLocation(Anim.Program, "model");
+		viewLoc = glGetUniformLocation(Anim.Program, "view");
+		projLoc = glGetUniformLocation(Anim.Program, "projection");
+		glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
+		glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform1f(glGetUniformLocation(Anim.Program, "time"), tiempo);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, casaPos + glm::vec3(-4.2f,29.0f,-0.4f));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		Humo.Draw(Anim);
 
 		glBindVertexArray(0);
 
@@ -658,24 +686,18 @@ void DoMovement()
 
 	}
 
-	if (keys[GLFW_KEY_T])
-	{
-		pointLightPositions[0].x += 0.01f;
-	}
-	if (keys[GLFW_KEY_G])
-	{
-		pointLightPositions[0].x -= 0.01f;
+	if (openWindow) {
+		ventana += 2.0f;
+		if (ventana >= 90)
+			openWindow = false;
 	}
 
-	if (keys[GLFW_KEY_Y])
-	{
-		pointLightPositions[0].y += 0.01f;
+	if (closeWindow) {
+		ventana -= 2.0f;
+		if (ventana <= 0)
+			closeWindow = false;
 	}
 
-	if (keys[GLFW_KEY_H])
-	{
-		pointLightPositions[0].y -= 0.01f;
-	}
 
 	if (openDoor1) {
 		door1 += 2.0f;
@@ -784,6 +806,16 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 	if (keys[GLFW_KEY_N])
 	{
 		closeDoor2 = true;
+	}
+
+	if (keys[GLFW_KEY_P])
+	{
+		openWindow = true;
+	}
+
+	if (keys[GLFW_KEY_L])
+	{
+		closeWindow = true;
 	}
 }
 

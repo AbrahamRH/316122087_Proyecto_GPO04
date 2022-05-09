@@ -1,0 +1,31 @@
+﻿  ProyectoFinal.cpp
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(336,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(368,101): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(387,106): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(395,106): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(419,126): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(419,109): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(419,93): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(420,127): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(420,110): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(420,94): warning C4244: 'argumento': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(578,23): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(826,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(827,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(831,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(832,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(834,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(835,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\ProyectoFinal\ProyectoFinal.cpp(880,27): warning C4305: 'inicializando': truncamiento de 'double' a 'float'
+soil2-debug.lib(SOIL2.obj) : warning LNK4075: se omite '/EDITANDCONTINUE' debido a la especificación '/OPT:ICF'
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRTD' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+  Generando código
+  1 of 709 functions ( 0.1%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
+  Generación de código finalizada
+soil2-debug.lib(etc1_utils.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(etc1_utils.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(image_DXT.obj)' o en 'E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Release\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(image_helper.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(image_helper.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+soil2-debug.lib(SOIL2.obj) : warning LNK4099: no se encontró PDB 'soil2-debug.pdb' con 'soil2-debug.lib(SOIL2.obj)' o en 'E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Release\soil2-debug.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+  ProyectoFinal.vcxproj -> E:\Escritorio\Universidad\8vo Semestre\Computación Gráfica\Laboratorio\Repositorio\316122087_Proyecto_GPO04\ProyectoFinal\Release\ProyectoFinal.exe

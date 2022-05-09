@@ -504,11 +504,3 @@ map_Kd Ventana.png
 Ni 1.00
 Ks 0.50 0.50 0.50
 Ns 18.00
-newmtl phong1SG
-illum 4
-Kd 0.65 0.78 0.88
-Ka 0.01 0.01 0.01
-Tf 0.75 0.75 0.75
-Ni 1.00
-Ks 0.50 0.50 0.50
-Ns 18.00
