@@ -48,8 +48,9 @@ glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
 bool active;
 
 // variables para las puertas
-float door1 = 0;
+float door1 = 0, door2 = 0 ;
 bool openDoor1 = false, closeDoor1 = false;
+bool openDoor2 = false, closeDoor2 = false;
 
 
 // variables para la rata
@@ -147,8 +148,8 @@ int main()
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);*/
 
 	// Create a GLFWwindow object that we can use for GLFW's functions
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final", nullptr, nullptr);
-	//GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final", glfwGetPrimaryMonitor(), nullptr);
+	//GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Proyecto Final", glfwGetPrimaryMonitor(), nullptr);
 
 	if (nullptr == window)
 	{
@@ -528,6 +529,22 @@ int main()
 		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
 		Rata.Draw(lightingShader);
 
+
+
+		model = glm::mat4(1);
+		model = glm::translate(model, casaPos +  glm::vec3(-1.5f, 1.7f, 8.0f));
+		model = glm::rotate(model,glm::radians(90.0f - door2), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Puerta.Draw(lightingShader);
+		model = glm::mat4(1);
+		model = glm::translate(model, casaPos + glm::vec3(1.5f, 1.7f, 8.0f));
+		model = glm::rotate(model,glm::radians(-90.0f), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Puerta.Draw(lightingShader);
+
+
 		model = glm::mat4(1);
 		model = glm::translate(model, casaPos);
 		model = glm::rotate(model,glm::radians(-90.0f),glm::vec3(0.0,1.0,0.0));
@@ -672,6 +689,18 @@ void DoMovement()
 			closeDoor1 = false;
 	}
 
+	if (openDoor2) {
+		door2 += 2.0f;
+		if (door2 >= 90)
+			openDoor2 = false;
+	}
+
+	if (closeDoor2) {
+		door2 -= 2.0f;
+		if (door2 <= 0)
+			closeDoor2 = false;
+	}
+
 
 
 }
@@ -745,6 +774,16 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 	if (keys[GLFW_KEY_O])
 	{
 		closeDoor1 = true;
+	}
+
+	if (keys[GLFW_KEY_M])
+	{
+		openDoor2 = true;
+	}
+
+	if (keys[GLFW_KEY_N])
+	{
+		closeDoor2 = true;
 	}
 }
 
