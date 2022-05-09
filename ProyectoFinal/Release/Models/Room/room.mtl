@@ -1,0 +1,465 @@
+newmtl Bed1:initialShadingGroup
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd colchon.jpg
+Ni 1.00
+newmtl Bed1:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd cobija.jpg
+Ni 1.00
+newmtl Bed1:lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd colchon.jpg
+Ni 1.00
+newmtl Bed1:lambert6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd barraMetal.jpg
+Ni 1.00
+newmtl Bed1:lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.95 0.95 0.95
+map_Kd barraMetal.jpg
+Ni 1.00
+newmtl Bed1:lambert10SG
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl Bed1:lambert11SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Base.jpg
+Ni 1.00
+newmtl Mesa:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TexMesa.jpg
+Ni 1.00
+newmtl Rack:initialShadingGroup
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Madera.jpg
+Ni 1.00
+newmtl Rack:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TexturesCom_WoodFine0031_2_seamless_S.jpg
+Ni 1.00
+newmtl alessaroom:RefRep_48_123099464_1_123099464_1_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_1.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom:RefRep_50_123099464_2_123099464_2_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_2.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom:RefRep_52_123099464_3_123099464_3_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_3.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom:RefRep_54_123099464_4_123099464_4_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_4.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom:RefRep_56_SH_initial__SH_initial_loader_exe
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd SH_initial_loader.exe_Sat_Jan_11_15-42-10_2014_5.png
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom:RefRep_59_Tex_0006_dd_Tex_0006_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0006.dds
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom:RefRep_61_Tex_0007_dd_Tex_0007_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0007.dds
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom:RefRep_63_123099464_8_123099464_8_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_8.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom1:RefRep_48_123099464_1_123099464_1_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_1.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom1:RefRep_50_123099464_2_123099464_2_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_2.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom1:RefRep_52_123099464_3_123099464_3_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_3.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom1:RefRep_54_123099464_4_123099464_4_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_4.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom1:RefRep_56_SH_initial__SH_initial_loader_exe
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd SH_initial_loader.exe_Sat_Jan_11_15-42-10_2014_5.png
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom1:RefRep_59_Tex_0006_dd_Tex_0006_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0006.dds
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom1:RefRep_61_Tex_0007_dd_Tex_0007_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0007.dds
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom1:RefRep_63_123099464_8_123099464_8_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_8.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom2:RefRep_48_123099464_1_123099464_1_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_1.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom2:RefRep_50_123099464_2_123099464_2_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_2.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom2:RefRep_52_123099464_3_123099464_3_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_3.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom2:RefRep_54_123099464_4_123099464_4_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_4.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom2:RefRep_56_SH_initial__SH_initial_loader_exe
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd SH_initial_loader.exe_Sat_Jan_11_15-42-10_2014_5.png
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom2:RefRep_59_Tex_0006_dd_Tex_0006_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0006.dds
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom2:RefRep_61_Tex_0007_dd_Tex_0007_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0007.dds
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom2:RefRep_63_123099464_8_123099464_8_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_8.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom3:RefRep_48_123099464_1_123099464_1_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_1.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom3:RefRep_50_123099464_2_123099464_2_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_2.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom3:RefRep_52_123099464_3_123099464_3_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_3.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom3:RefRep_54_123099464_4_123099464_4_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_4.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom3:RefRep_56_SH_initial__SH_initial_loader_exe
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd SH_initial_loader.exe_Sat_Jan_11_15-42-10_2014_5.png
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom3:RefRep_59_Tex_0006_dd_Tex_0006_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0006.dds
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom3:RefRep_61_Tex_0007_dd_Tex_0007_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0007.dds
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl alessaroom3:RefRep_63_123099464_8_123099464_8_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_8.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl bote2:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd bote.png
+Ni 1.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd PisoCuarto.jpg
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd ParedCuartoSucio.jpg
+Ni 1.00
+newmtl lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd ParedCuartoSucio.jpg
+Ni 1.00
+newmtl pasted__RefRep_48_123099464_1_123099464_1_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_1.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl pasted__RefRep_50_123099464_2_123099464_2_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_2.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl pasted__RefRep_52_123099464_3_123099464_3_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_3.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl pasted__RefRep_54_123099464_4_123099464_4_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_4.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl pasted__RefRep_56_SH_initial__SH_initial_loader_exe
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd SH_initial_loader.exe_Sat_Jan_11_15-42-10_2014_5.png
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl pasted__RefRep_59_Tex_0006_dd_Tex_0006_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0006.dds
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
+newmtl pasted__RefRep_61_Tex_0007_dd_Tex_0007_dds
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd Tex_0007.dds
+Ni 1.50
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl pasted__RefRep_63_123099464_8_123099464_8_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_8.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92

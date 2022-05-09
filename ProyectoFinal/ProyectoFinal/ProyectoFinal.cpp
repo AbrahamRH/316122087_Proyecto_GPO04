@@ -411,8 +411,6 @@ int main()
 		spotLight = spotL;
 
 		// SpotLight
-		//glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.position"), spotlightPosition.x, spotlightPosition.y, spotlightPosition.z);
-		//glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.direction"), spotlightDirection.x, spotlightDirection.y, spotlightDirection.z);
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.direction"), camera.GetFront().x , camera.GetFront().y , camera.GetFront().z );
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.position"), camera.GetPosition().x , camera.GetPosition().y , camera.GetPosition().z );
 		glUniform3f(glGetUniformLocation(lightingShader.Program, "spotLight.ambient"), spotLight.x, spotLight.y, spotLight.z);
