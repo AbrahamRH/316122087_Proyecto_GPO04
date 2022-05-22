@@ -70,7 +70,7 @@ float rotOso = 0.0f;
 float tiempo;
 
 glm::vec3 casaPos(0.0f, 0.2f, -20.0f);
-glm::vec3 cuartoPos = casaPos + glm::vec3(-5.0f, 0.2f, -2.0f);
+glm::vec3 cuartoPos = casaPos + glm::vec3(5.0f, 0.2f, -2.0f);
 glm::vec3 cuartoPos2 = casaPos + glm::vec3(5.0f, 0.2f, -2.0f);
 
 glm::vec3 cabezaOsoPos = cuartoPos + glm::vec3(-1.7f, 1.4f, -0.02f);
@@ -209,6 +209,12 @@ int main()
 	Model CuerpoOso((char*)"Models/Oso/Cuerpo/cuerpo.obj");
 	Model Humo((char*)"Models/Chimenea/humo.obj");
 	Model Ventana((char*)"Models/Ventana/ventana.obj");
+
+	Model CamaH((char*)"Models/CamaH/cama.obj");
+	Model Cuarto((char*)"Models/CuartoH/cuarto.obj");
+	Model MesaH((char*)"Models/MesaH/mesa.obj");
+	Model Banco((char*)"Models/Banco/banco.obj");
+	Model Lampara((char*)"Models/Lampara/lampara.obj");
 
 	GLfloat skyboxVertices[] = {
 		// Positions

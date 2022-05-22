@@ -1,0 +1,78 @@
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_3.png
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_5.png
+Ni 1.00
+newmtl lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_4.png
+Ni 1.00
+newmtl lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_4.png
+Ni 1.00
+newmtl lambert6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_5.png
+Ni 1.00
+newmtl lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_4.png
+Ni 1.00
+newmtl lambert8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_2.png
+Ni 1.00
+newmtl pasted__lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_3.png
+Ni 1.00
+newmtl pasted__pasted__lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_3.png
+Ni 1.00
+newmtl tbl022:tbl022_wood__Vra
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_7.png
+Ni 1.00
+Ks 0.90 0.90 0.90
+Ns 32.00
