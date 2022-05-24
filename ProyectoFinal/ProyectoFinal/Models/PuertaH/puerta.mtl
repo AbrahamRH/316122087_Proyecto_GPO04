@@ -1,3 +1,12 @@
+newmtl Puerta1:RefRep_50_123099464_2_123099464_2_tga
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.00 0.00 0.00
+map_Kd 123099464_2.tga
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 3.92
 newmtl Radiator_001:blinn3SG
 illum 4
 Kd 0.63 0.57 0.45
@@ -115,7 +124,6 @@ illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd SH_initial_loader.exe_Sat_Dec_10_06-32-51_2005_7.png
 Ni 1.00
 Ks 0.90 0.90 0.90
 Ns 32.00

@@ -48,9 +48,10 @@ glm::vec3 lightPos(0.0f, 0.0f, 0.0f);
 bool active;
 
 // variables para las puertas
-float door1 = 0, door2 = 0 ;
+float door1 = 0, door2 = 0 , door3 = 0;
 bool openDoor1 = false, closeDoor1 = false;
 bool openDoor2 = false, closeDoor2 = false;
+bool openDoor3 = false, closeDoor3 = false;
 
 float ventana = 0;
 bool openWindow = false;
@@ -71,7 +72,7 @@ float tiempo;
 
 glm::vec3 casaPos(0.0f, 0.2f, -20.0f);
 glm::vec3 cuartoPos = casaPos + glm::vec3(5.0f, 0.2f, -2.0f);
-glm::vec3 cuartoPos2 = casaPos + glm::vec3(5.0f, 0.2f, -2.0f);
+glm::vec3 cuartoPos2 = casaPos + glm::vec3(-5.0f, 0.2f, -2.0f);
 
 glm::vec3 cabezaOsoPos = cuartoPos + glm::vec3(-1.7f, 1.4f, -0.02f);
 
@@ -80,7 +81,7 @@ glm::vec3 pointLightPositions[] = {
 	glm::vec3(0.0f,3.8f, 0.0f) + cuartoPos,
 	glm::vec3(9.0f,15.0f, 8.0f) + casaPos,
 	glm::vec3(-9.0f,15.0f, 8.0f) + casaPos,
-	glm::vec3(-1.5f,8.0f, 8.0f) + cuartoPos2,
+	glm::vec3(-2.5f,2.0f, 0.0f) + cuartoPos2,
 };
 
 
@@ -215,6 +216,7 @@ int main()
 	Model MesaH((char*)"Models/MesaH/mesa.obj");
 	Model Banco((char*)"Models/Banco/banco.obj");
 	Model Lampara((char*)"Models/Lampara/lampara.obj");
+	Model Puerta2((char*)"Models/PuertaH/puerta.obj");
 
 	GLfloat skyboxVertices[] = {
 		// Positions
@@ -568,6 +570,47 @@ int main()
 		Casa.Draw(lightingShader);
 
 
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos2);
+		model = glm::rotate(model,glm::radians(90.0f), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Cuarto.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos2);
+		model = glm::rotate(model,glm::radians(90.0f), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Lampara.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos2);
+		model = glm::rotate(model,glm::radians(90.0f), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		MesaH.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos2);
+		model = glm::rotate(model,glm::radians(90.0f), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Banco.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos2);
+		model = glm::rotate(model,glm::radians(90.0f), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		CamaH.Draw(lightingShader);
+
+		model = glm::mat4(1);
+		model = glm::translate(model, cuartoPos2 + glm::vec3( 1.309f,1.938f, 2.383f) );
+		model = glm::rotate(model,glm::radians(90.0f - door3), glm::vec3(0.0,1.0,0.0));
+		glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+		glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+		Puerta2.Draw(lightingShader);
 
 		//model = glm::scale(model, glm::vec3(2.0f, 2.0f, 2.0f));
 
@@ -727,6 +770,18 @@ void DoMovement()
 			closeDoor2 = false;
 	}
 
+	if (openDoor3) {
+		door3 += 2.0f;
+		if (door3 >= 90)
+			openDoor3 = false;
+	}
+
+	if (closeDoor3) {
+		door3 -= 2.0f;
+		if (door3 <= 0)
+			closeDoor3 = false;
+	}
+
 
 
 }
@@ -789,6 +844,18 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 			Light1 = glm::vec3(0);//Cuado es solo un valor en los 3 vectores pueden dejar solo una componente
 		}
 	}
+	if (keys[GLFW_KEY_T])
+	{
+		active = !active;
+		if (active)
+		{
+			Light3 = glm::vec3(1.0f, 1.0f, 1.0f);
+		}
+		else
+		{
+			Light3 = glm::vec3(0);//Cuado es solo un valor en los 3 vectores pueden dejar solo una componente
+		}
+	}
 
 
 
@@ -810,6 +877,16 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 	if (keys[GLFW_KEY_N])
 	{
 		closeDoor2 = true;
+	}
+
+	if (keys[GLFW_KEY_Y])
+	{
+		openDoor3 = true;
+	}
+
+	if (keys[GLFW_KEY_H])
+	{
+		closeDoor3 = true;
 	}
 
 	if (keys[GLFW_KEY_P])
